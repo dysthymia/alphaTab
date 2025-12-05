@@ -43,7 +43,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: alphaTab-dist
-          path: dist
+          path: |
+            packages/alphatab/dist
+            packages/webpack/dist
+            packages/vite/dist
       - run: npm run test-web
       - run: npm run build-language-server
       - run: npm run build-monaco
